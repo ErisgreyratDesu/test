@@ -464,7 +464,7 @@ main {
 {
     background-color: #FFFFFF99;
     backdrop-filter: blur(400px);
-    width: 100%;
+    max-width: 100%;
     min-height: max-content;
     padding: 2em;
     display: flex;
@@ -473,24 +473,142 @@ main {
 }
 .wrapper_content2
 {
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2em;
+    gap: 4em;
     margin:0 3em 0 3em;
 }
+/* IMG of Content2 */
 .wrapperimgcontent2 
 {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index: 1;
 }
+/* Instructor Outstading of Content2*/
+.wrapperinstructorscontent2 
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFFFF;
+    position: absolute;
+    right:-30px;
+    bottom:15%;
+    z-index: 2;
+    width: 10.5em;
+    max-width: 10.5em;
+    height: 14em;
+    filter: drop-shadow(0 0 69.23px rgba(112, 112, 112, 0.25));
+}
+.iconOfInstructorscontent2
+{
+    background-color: rgba(255, 231, 219, 1);
+    border-radius: 50px;
+    max-width: 3.1em;
+    width: 3em;
+    height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.iconOfInstructorscontent2 > i
+{
+    color: rgba(247, 126, 35, 1);
+}
+.headingOfInstructorContent2 > span
+{
+    color: rgba(247, 126, 35, 1);
+    font-family: 'Poppins',sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    position: relative;
+}
+.headingOfInstructorContent2 > span::after
+{
+    content: "";
+    background-image: url(./Vector\ 23.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 90%;
+    height: 100%;
+    position: absolute;
+}
+.headingOfInstructorContent2 
+{
+    color: rgba(51, 51, 51, 1);
+    font-family: 'Poppins',sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+.wrapper_imgs_Instructor_Content2
+{
+    display: flex;
+    height: 2.5em;
+    width: 5.1em;
+    position: relative;
+}
+.imgs_Instructor_Content2 
+{
+    object-fit: cover;
+    border-radius: 30px;
+    border:3px solid rgba(255, 255, 255, 1);
+    max-width: 2.5em;
+    width: 2.5em;
+    position: absolute;
+    height: 2.5em;
+    border: none;
+    transition: all 0.3s;
+    border: 1px solid red;
+    cursor: pointer;
+}
+.imgs_Instructor_Content2:hover
+{
+    transform: translateY(-5px);
+}
+.imgs_Instructor_Content2_i1 
+{
+    z-index: 3;
+    top:50%;
+    left:15%;
+    transform: translateX(-50%) translateY(-50%);
+    border:3px solid rgba(255, 255, 255, 1);
+}
+.imgs_Instructor_Content2_i2
+{
+    top:50%;
+    border:3px solid rgba(255, 255, 255, 1);
+    left:50%;
+    z-index: 4;
+    transform: translateX(-50%) translateY(-50%);
+}
+.imgs_Instructor_Content2_i3 
+{
+    z-index: 5;
+    border:3px solid rgba(255, 255, 255, 1);
+    top:50%;
+    left:85%;
+    transform: translateX(-50%) translateY(-50%);
+}
+/* Circle behind img of content2 */
 .wrapper_circle {
     width: 31.25em;
     height: 31.25em;
     border-radius: 50%;
     border:3.38px dotted #F77E23;
 }
+/* Smaller ircle inside the circle which behind img of content2 */
 .circleSmallerInside {
     background-color: #FFE7DB;
     border-radius: 50%;
@@ -503,6 +621,7 @@ main {
     align-items: center;
     position: relative;
 }
+/* Square img top */
 .wrapper_img_squareT 
 {
     -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 50%);
@@ -514,6 +633,7 @@ main {
     bottom: 0px;
     clip-path: polygon(36% 0, 100% 0, 100% 50%, 100% 100%, 0 100%, 0 57%);
 }
+/* Square img bottom */
 .wrapper_img_squareB 
 {
     -webkit-mask-image: linear-gradient(to bottom, transparent 50%, black 50%);
@@ -538,15 +658,6 @@ main {
     width: 230%;
     background-repeat: no-repeat;
     background-size: cover;
-}
-.imgTop {
-    -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 50%);
-    mask-image: linear-gradient(to bottom, black 50%, transparent 50%);
-}
-.imgBottom {
-    overflow: hidden;
-    -webkit-mask-image: linear-gradient(to bottom, transparent 50%, black 50%);
-    mask-image: linear-gradient(to bottom, transparent 50%, black 50%);
 }
 .wrappertextcontent2 
 {
@@ -600,6 +711,7 @@ main {
     transition: all 0.5s ease;
     cursor: pointer;
     border-radius: 5px;
+    border: none;
 }
 .wrappertextcontent2_btn:hover
 {
